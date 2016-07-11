@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6D15EC491D339AA8004D5B93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D15EC481D339AA8004D5B93 /* main.m */; };
+		6D15EC4C1D339AA8004D5B93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D15EC4B1D339AA8004D5B93 /* AppDelegate.m */; };
+		6D15EC4F1D339AA8004D5B93 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D15EC4E1D339AA8004D5B93 /* ViewController.m */; };
+		6D15EC521D339AA8004D5B93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D15EC501D339AA8004D5B93 /* Main.storyboard */; };
+		6D15EC541D339AA8004D5B93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D15EC531D339AA8004D5B93 /* Assets.xcassets */; };
+		6D15EC571D339AA8004D5B93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D15EC551D339AA8004D5B93 /* LaunchScreen.storyboard */; };
+		6D15EC621D339AA8004D5B93 /* LBWNetworkReachabilityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D15EC611D339AA8004D5B93 /* LBWNetworkReachabilityTests.m */; };
+		6D15EC6D1D339AA8004D5B93 /* LBWNetworkReachabilityUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D15EC6C1D339AA8004D5B93 /* LBWNetworkReachabilityUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6D15EC5E1D339AA8004D5B93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D15EC3C1D339AA8004D5B93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D15EC431D339AA8004D5B93;
+			remoteInfo = LBWNetworkReachability;
+		};
+		6D15EC691D339AA8004D5B93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D15EC3C1D339AA8004D5B93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D15EC431D339AA8004D5B93;
+			remoteInfo = LBWNetworkReachability;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6D15EC441D339AA8004D5B93 /* LBWNetworkReachability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LBWNetworkReachability.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D15EC481D339AA8004D5B93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6D15EC4A1D339AA8004D5B93 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6D15EC4B1D339AA8004D5B93 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6D15EC4D1D339AA8004D5B93 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6D15EC4E1D339AA8004D5B93 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6D15EC511D339AA8004D5B93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6D15EC531D339AA8004D5B93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6D15EC561D339AA8004D5B93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6D15EC581D339AA8004D5B93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D15EC5D1D339AA8004D5B93 /* LBWNetworkReachabilityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LBWNetworkReachabilityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D15EC611D339AA8004D5B93 /* LBWNetworkReachabilityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBWNetworkReachabilityTests.m; sourceTree = "<group>"; };
+		6D15EC631D339AA8004D5B93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D15EC681D339AA8004D5B93 /* LBWNetworkReachabilityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LBWNetworkReachabilityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D15EC6C1D339AA8004D5B93 /* LBWNetworkReachabilityUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBWNetworkReachabilityUITests.m; sourceTree = "<group>"; };
+		6D15EC6E1D339AA8004D5B93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6D15EC411D339AA8004D5B93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D15EC5A1D339AA8004D5B93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D15EC651D339AA8004D5B93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6D15EC3B1D339AA8004D5B93 = {
+			isa = PBXGroup;
+			children = (
+				6D15EC461D339AA8004D5B93 /* LBWNetworkReachability */,
+				6D15EC601D339AA8004D5B93 /* LBWNetworkReachabilityTests */,
+				6D15EC6B1D339AA8004D5B93 /* LBWNetworkReachabilityUITests */,
+				6D15EC451D339AA8004D5B93 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6D15EC451D339AA8004D5B93 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D15EC441D339AA8004D5B93 /* LBWNetworkReachability.app */,
+				6D15EC5D1D339AA8004D5B93 /* LBWNetworkReachabilityTests.xctest */,
+				6D15EC681D339AA8004D5B93 /* LBWNetworkReachabilityUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D15EC461D339AA8004D5B93 /* LBWNetworkReachability */ = {
+			isa = PBXGroup;
+			children = (
+				6D15EC4A1D339AA8004D5B93 /* AppDelegate.h */,
+				6D15EC4B1D339AA8004D5B93 /* AppDelegate.m */,
+				6D15EC4D1D339AA8004D5B93 /* ViewController.h */,
+				6D15EC4E1D339AA8004D5B93 /* ViewController.m */,
+				6D15EC501D339AA8004D5B93 /* Main.storyboard */,
+				6D15EC531D339AA8004D5B93 /* Assets.xcassets */,
+				6D15EC551D339AA8004D5B93 /* LaunchScreen.storyboard */,
+				6D15EC581D339AA8004D5B93 /* Info.plist */,
+				6D15EC471D339AA8004D5B93 /* Supporting Files */,
+			);
+			path = LBWNetworkReachability;
+			sourceTree = "<group>";
+		};
+		6D15EC471D339AA8004D5B93 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6D15EC481D339AA8004D5B93 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6D15EC601D339AA8004D5B93 /* LBWNetworkReachabilityTests */ = {
+			isa = PBXGroup;
+			children = (
+				6D15EC611D339AA8004D5B93 /* LBWNetworkReachabilityTests.m */,
+				6D15EC631D339AA8004D5B93 /* Info.plist */,
+			);
+			path = LBWNetworkReachabilityTests;
+			sourceTree = "<group>";
+		};
+		6D15EC6B1D339AA8004D5B93 /* LBWNetworkReachabilityUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6D15EC6C1D339AA8004D5B93 /* LBWNetworkReachabilityUITests.m */,
+				6D15EC6E1D339AA8004D5B93 /* Info.plist */,
+			);
+			path = LBWNetworkReachabilityUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6D15EC431D339AA8004D5B93 /* LBWNetworkReachability */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D15EC711D339AA8004D5B93 /* Build configuration list for PBXNativeTarget "LBWNetworkReachability" */;
+			buildPhases = (
+				6D15EC401D339AA8004D5B93 /* Sources */,
+				6D15EC411D339AA8004D5B93 /* Frameworks */,
+				6D15EC421D339AA8004D5B93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LBWNetworkReachability;
+			productName = LBWNetworkReachability;
+			productReference = 6D15EC441D339AA8004D5B93 /* LBWNetworkReachability.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6D15EC5C1D339AA8004D5B93 /* LBWNetworkReachabilityTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D15EC741D339AA8004D5B93 /* Build configuration list for PBXNativeTarget "LBWNetworkReachabilityTests" */;
+			buildPhases = (
+				6D15EC591D339AA8004D5B93 /* Sources */,
+				6D15EC5A1D339AA8004D5B93 /* Frameworks */,
+				6D15EC5B1D339AA8004D5B93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D15EC5F1D339AA8004D5B93 /* PBXTargetDependency */,
+			);
+			name = LBWNetworkReachabilityTests;
+			productName = LBWNetworkReachabilityTests;
+			productReference = 6D15EC5D1D339AA8004D5B93 /* LBWNetworkReachabilityTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6D15EC671D339AA8004D5B93 /* LBWNetworkReachabilityUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D15EC771D339AA8004D5B93 /* Build configuration list for PBXNativeTarget "LBWNetworkReachabilityUITests" */;
+			buildPhases = (
+				6D15EC641D339AA8004D5B93 /* Sources */,
+				6D15EC651D339AA8004D5B93 /* Frameworks */,
+				6D15EC661D339AA8004D5B93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D15EC6A1D339AA8004D5B93 /* PBXTargetDependency */,
+			);
+			name = LBWNetworkReachabilityUITests;
+			productName = LBWNetworkReachabilityUITests;
+			productReference = 6D15EC681D339AA8004D5B93 /* LBWNetworkReachabilityUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6D15EC3C1D339AA8004D5B93 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "李博文";
+				TargetAttributes = {
+					6D15EC431D339AA8004D5B93 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					6D15EC5C1D339AA8004D5B93 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 6D15EC431D339AA8004D5B93;
+					};
+					6D15EC671D339AA8004D5B93 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 6D15EC431D339AA8004D5B93;
+					};
+				};
+			};
+			buildConfigurationList = 6D15EC3F1D339AA8004D5B93 /* Build configuration list for PBXProject "LBWNetworkReachability" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6D15EC3B1D339AA8004D5B93;
+			productRefGroup = 6D15EC451D339AA8004D5B93 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6D15EC431D339AA8004D5B93 /* LBWNetworkReachability */,
+				6D15EC5C1D339AA8004D5B93 /* LBWNetworkReachabilityTests */,
+				6D15EC671D339AA8004D5B93 /* LBWNetworkReachabilityUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6D15EC421D339AA8004D5B93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D15EC571D339AA8004D5B93 /* LaunchScreen.storyboard in Resources */,
+				6D15EC541D339AA8004D5B93 /* Assets.xcassets in Resources */,
+				6D15EC521D339AA8004D5B93 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D15EC5B1D339AA8004D5B93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D15EC661D339AA8004D5B93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6D15EC401D339AA8004D5B93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D15EC4F1D339AA8004D5B93 /* ViewController.m in Sources */,
+				6D15EC4C1D339AA8004D5B93 /* AppDelegate.m in Sources */,
+				6D15EC491D339AA8004D5B93 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D15EC591D339AA8004D5B93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D15EC621D339AA8004D5B93 /* LBWNetworkReachabilityTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D15EC641D339AA8004D5B93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D15EC6D1D339AA8004D5B93 /* LBWNetworkReachabilityUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6D15EC5F1D339AA8004D5B93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D15EC431D339AA8004D5B93 /* LBWNetworkReachability */;
+			targetProxy = 6D15EC5E1D339AA8004D5B93 /* PBXContainerItemProxy */;
+		};
+		6D15EC6A1D339AA8004D5B93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D15EC431D339AA8004D5B93 /* LBWNetworkReachability */;
+			targetProxy = 6D15EC691D339AA8004D5B93 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6D15EC501D339AA8004D5B93 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D15EC511D339AA8004D5B93 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6D15EC551D339AA8004D5B93 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D15EC561D339AA8004D5B93 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6D15EC6F1D339AA8004D5B93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6D15EC701D339AA8004D5B93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6D15EC721D339AA8004D5B93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LBWNetworkReachability/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.leebowen.LBWNetworkReachability;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6D15EC731D339AA8004D5B93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LBWNetworkReachability/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.leebowen.LBWNetworkReachability;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6D15EC751D339AA8004D5B93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LBWNetworkReachabilityTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.leebowen.LBWNetworkReachabilityTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LBWNetworkReachability.app/LBWNetworkReachability";
+			};
+			name = Debug;
+		};
+		6D15EC761D339AA8004D5B93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LBWNetworkReachabilityTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.leebowen.LBWNetworkReachabilityTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LBWNetworkReachability.app/LBWNetworkReachability";
+			};
+			name = Release;
+		};
+		6D15EC781D339AA8004D5B93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LBWNetworkReachabilityUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.leebowen.LBWNetworkReachabilityUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LBWNetworkReachability;
+			};
+			name = Debug;
+		};
+		6D15EC791D339AA8004D5B93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LBWNetworkReachabilityUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.leebowen.LBWNetworkReachabilityUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LBWNetworkReachability;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6D15EC3F1D339AA8004D5B93 /* Build configuration list for PBXProject "LBWNetworkReachability" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D15EC6F1D339AA8004D5B93 /* Debug */,
+				6D15EC701D339AA8004D5B93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D15EC711D339AA8004D5B93 /* Build configuration list for PBXNativeTarget "LBWNetworkReachability" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D15EC721D339AA8004D5B93 /* Debug */,
+				6D15EC731D339AA8004D5B93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6D15EC741D339AA8004D5B93 /* Build configuration list for PBXNativeTarget "LBWNetworkReachabilityTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D15EC751D339AA8004D5B93 /* Debug */,
+				6D15EC761D339AA8004D5B93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6D15EC771D339AA8004D5B93 /* Build configuration list for PBXNativeTarget "LBWNetworkReachabilityUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D15EC781D339AA8004D5B93 /* Debug */,
+				6D15EC791D339AA8004D5B93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6D15EC3C1D339AA8004D5B93 /* Project object */;
+}
