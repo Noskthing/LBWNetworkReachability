@@ -15,6 +15,8 @@
 		6D15EC571D339AA8004D5B93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D15EC551D339AA8004D5B93 /* LaunchScreen.storyboard */; };
 		6D15EC621D339AA8004D5B93 /* LBWNetworkReachabilityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D15EC611D339AA8004D5B93 /* LBWNetworkReachabilityTests.m */; };
 		6D15EC6D1D339AA8004D5B93 /* LBWNetworkReachabilityUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D15EC6C1D339AA8004D5B93 /* LBWNetworkReachabilityUITests.m */; };
+		6D15EC7D1D339C31004D5B93 /* SystemNetworkReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D15EC7C1D339C31004D5B93 /* SystemNetworkReachability.m */; };
+		6D15EC8B1D34D0B1004D5B93 /* NetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D15EC8A1D34D0B1004D5B93 /* NetworkReachabilityManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,11 @@
 		6D15EC681D339AA8004D5B93 /* LBWNetworkReachabilityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LBWNetworkReachabilityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D15EC6C1D339AA8004D5B93 /* LBWNetworkReachabilityUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBWNetworkReachabilityUITests.m; sourceTree = "<group>"; };
 		6D15EC6E1D339AA8004D5B93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D15EC7B1D339C31004D5B93 /* SystemNetworkReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemNetworkReachability.h; sourceTree = "<group>"; };
+		6D15EC7C1D339C31004D5B93 /* SystemNetworkReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemNetworkReachability.m; sourceTree = "<group>"; };
+		6D15EC7E1D33A748004D5B93 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		6D15EC891D34D0B1004D5B93 /* NetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkReachabilityManager.h; sourceTree = "<group>"; };
+		6D15EC8A1D34D0B1004D5B93 /* NetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkReachabilityManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +108,7 @@
 		6D15EC461D339AA8004D5B93 /* LBWNetworkReachability */ = {
 			isa = PBXGroup;
 			children = (
+				6D15EC7A1D339AAE004D5B93 /* Core */,
 				6D15EC4A1D339AA8004D5B93 /* AppDelegate.h */,
 				6D15EC4B1D339AA8004D5B93 /* AppDelegate.m */,
 				6D15EC4D1D339AA8004D5B93 /* ViewController.h */,
@@ -138,6 +146,18 @@
 				6D15EC6E1D339AA8004D5B93 /* Info.plist */,
 			);
 			path = LBWNetworkReachabilityUITests;
+			sourceTree = "<group>";
+		};
+		6D15EC7A1D339AAE004D5B93 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				6D15EC7E1D33A748004D5B93 /* Header.h */,
+				6D15EC7B1D339C31004D5B93 /* SystemNetworkReachability.h */,
+				6D15EC7C1D339C31004D5B93 /* SystemNetworkReachability.m */,
+				6D15EC891D34D0B1004D5B93 /* NetworkReachabilityManager.h */,
+				6D15EC8A1D34D0B1004D5B93 /* NetworkReachabilityManager.m */,
+			);
+			name = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +292,8 @@
 			files = (
 				6D15EC4F1D339AA8004D5B93 /* ViewController.m in Sources */,
 				6D15EC4C1D339AA8004D5B93 /* AppDelegate.m in Sources */,
+				6D15EC8B1D34D0B1004D5B93 /* NetworkReachabilityManager.m in Sources */,
+				6D15EC7D1D339C31004D5B93 /* SystemNetworkReachability.m in Sources */,
 				6D15EC491D339AA8004D5B93 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
