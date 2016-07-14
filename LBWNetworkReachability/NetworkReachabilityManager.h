@@ -8,6 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+
+typedef void(^CurrentNetworkStatusBlock)();
+
+
+
+typedef NS_ENUM(NSUInteger, NetworkStatus) {
+    NetworkStatusUnableConnect = 0,
+    NetworkStatusWifiAbleConnect,
+    NetworkStatusWifiUnableConnect,
+    NetworkStatusWWANAbleConnect,
+    NetworkStatusWWANUnableConnect,
+};
+extern NSString * const kNetworkStatusChange;
 @interface NetworkReachabilityManager : NSObject
 
 
@@ -16,8 +29,26 @@
  */
 @property (nonatomic,copy)NSString * hostName;
 
+/**
+ *  this is network real status
+ */
+@property (nonatomic,assign) NetworkStatus currentNetworkStatus;
 
+/**
+ *  start Network Monitor.
+ */
+- (void)startNotifier;
 
+/**
+ *  stop Network Monitor
+ */
+- (void)stopNotifier;
+
+/**
+ *  U must use property or Viar to keep this instance . because in ARC system will deallocating it and u can not get notification. advise that initialize it in AppDelegate and add Observe where u need monititor nerwork status.
+ *
+ *  @return networkManager
+ */
 + (instancetype)sharedManager;
 
 @end

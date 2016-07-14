@@ -1,8 +1,8 @@
 //
-//  SystemNetworkReachability.h
+//  LBWNetworkReachability.h
 //  LBWNetworkReachability
 //
-//  Created by ml on 16/7/11.
+//  Created by ml on 16/7/12.
 //  Copyright © 2016年 李博文. All rights reserved.
 //
 
@@ -10,13 +10,17 @@
 #import <SystemConfiguration/SystemConfiguration.h>
 
 
-typedef enum : NSInteger {
-    SystemNetworkReachabilityNotReachable = 0,
-    SystemNetworkReachabilityReachableViaWiFi,
-    SystemNetworkReachabilityReachableViaWWAN
-} SystemNetworkReachabilityStatus;
+extern NSString * kReachabilityChangedNotification;
 
-@interface SystemNetworkReachability : NSObject
+typedef enum : NSInteger {
+    NetworkNotReachable = 0,
+    NetworkViaWiFi,
+    NetworkWWAN
+} NetworkReachabilityStatus;
+
+
+
+@interface LBWNetworkReachability : NSObject
 
 + (instancetype)sharedSystemNetworkReachability;
 
@@ -29,5 +33,6 @@ typedef enum : NSInteger {
 
 - (void)stopNotifier;
 
-- (SystemNetworkReachabilityStatus)currentSystemNetworkReachabilityStatus;
+- (NetworkReachabilityStatus)currentSystemNetworkReachabilityStatus;
+
 @end

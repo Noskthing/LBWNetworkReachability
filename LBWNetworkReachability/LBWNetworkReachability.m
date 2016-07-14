@@ -1,19 +1,19 @@
 //
-//  SystemNetworkReachability.m
+//  LBWNetworkReachability.m
 //  LBWNetworkReachability
 //
-//  Created by ml on 16/7/11.
+//  Created by ml on 16/7/12.
 //  Copyright © 2016年 李博文. All rights reserved.
 //
 
-#import "SystemNetworkReachability.h"
+#import "LBWNetworkReachability.h"
 #import <netinet/in.h>
 #import <netinet6/in6.h>
 #import <arpa/inet.h>
 #import <ifaddrs.h>
 
-NSString *kReachabilityChangedNotification = @"kNetworkReachabilityChangedNotification";
 
+NSString * kReachabilityChangedNotification = @"kNetworkReachabilityChangedNotification";
 
 #define kShouldPrintReachabilityFlags 1
 static void PrintReachabilityFlags(SCNetworkReachabilityFlags flags, const char* comment)
@@ -40,9 +40,9 @@ static void SystemNetworkReachabilityCallback (SCNetworkReachabilityRef target, 
 {
 #pragma unused (target, flags)
     NSCAssert(info != NULL, @"info was NULL in ReachabilityCallback");
-    NSCAssert([(__bridge NSObject*) info isKindOfClass: [SystemNetworkReachability class]], @"info was wrong class in ReachabilityCallback");
+    NSCAssert([(__bridge NSObject*) info isKindOfClass: [LBWNetworkReachability class]], @"info was wrong class in ReachabilityCallback");
     
-    SystemNetworkReachability * noteObject = (__bridge SystemNetworkReachability *)info;
+    LBWNetworkReachability * noteObject = (__bridge LBWNetworkReachability *)info;
     // Post a notification to notify the client that the network reachability changed.
     //on main thread
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -51,7 +51,7 @@ static void SystemNetworkReachabilityCallback (SCNetworkReachabilityRef target, 
     
 }
 
-@interface SystemNetworkReachability ()
+@interface LBWNetworkReachability ()
 
 @property (nonatomic,assign)SCNetworkReachabilityRef networkReachabilityRef;
 
@@ -61,7 +61,7 @@ static void SystemNetworkReachabilityCallback (SCNetworkReachabilityRef target, 
 @end
 
 
-@implementation SystemNetworkReachability
+@implementation LBWNetworkReachability
 
 - (instancetype)init
 {
@@ -129,10 +129,10 @@ static void SystemNetworkReachabilityCallback (SCNetworkReachabilityRef target, 
     }
 }
 
-- (SystemNetworkReachabilityStatus)currentSystemNetworkReachabilityStatus
+- (NetworkReachabilityStatus)currentSystemNetworkReachabilityStatus
 {
     NSAssert(_networkReachabilityRef != NULL, @"currentNetworkStatus called with NULL SCNetworkReachabilityRef");
-    SystemNetworkReachabilityStatus returnValue = SystemNetworkReachabilityNotReachable;
+    NetworkReachabilityStatus returnValue = NetworkNotReachable;
     SCNetworkReachabilityFlags flags;
     
     if (SCNetworkReachabilityGetFlags(_networkReachabilityRef, &flags))
@@ -144,24 +144,24 @@ static void SystemNetworkReachabilityCallback (SCNetworkReachabilityRef target, 
 }
 
 #pragma mark    - Network Flag Handling
-- (SystemNetworkReachabilityStatus)networkStatusForFlags:(SCNetworkReachabilityFlags)flags
+- (NetworkReachabilityStatus)networkStatusForFlags:(SCNetworkReachabilityFlags)flags
 {
     PrintReachabilityFlags(flags, "networkStatusForFlags");
     
     if ((flags & kSCNetworkReachabilityFlagsReachable) == 0)
     {
         // The target host is not reachable.
-        return SystemNetworkReachabilityNotReachable;
+        return NetworkNotReachable;
     }
     
-    SystemNetworkReachabilityStatus returnValue = SystemNetworkReachabilityNotReachable;
+    NetworkReachabilityStatus returnValue = NetworkNotReachable;
     
     if ((flags & kSCNetworkReachabilityFlagsConnectionRequired) == 0)
     {
         /*
          If the target host is reachable and no connection is required then we'll assume (for now) that you're on Wi-Fi...
          */
-        returnValue = SystemNetworkReachabilityReachableViaWiFi;
+        returnValue = NetworkViaWiFi;
     }
     
     if ((((flags & kSCNetworkReachabilityFlagsConnectionOnDemand ) != 0) ||
@@ -176,7 +176,7 @@ static void SystemNetworkReachabilityCallback (SCNetworkReachabilityRef target, 
             /*
              ... and no [user] intervention is needed...
              */
-            returnValue = SystemNetworkReachabilityReachableViaWiFi;
+            returnValue = NetworkViaWiFi;
         }
     }
     
@@ -185,7 +185,7 @@ static void SystemNetworkReachabilityCallback (SCNetworkReachabilityRef target, 
         /*
          ... but WWAN connections are OK if the calling application is using the CFNetwork APIs.
          */
-        returnValue = SystemNetworkReachabilityReachableViaWWAN;
+        returnValue = NetworkWWAN;
     }
     
     return returnValue;
