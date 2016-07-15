@@ -8,10 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-
 typedef void(^CurrentNetworkStatusBlock)();
-
-
 
 typedef NS_ENUM(NSUInteger, NetworkStatus) {
     NetworkStatusUnableConnect = 0,
@@ -21,6 +18,7 @@ typedef NS_ENUM(NSUInteger, NetworkStatus) {
     NetworkStatusWWANUnableConnect,
 };
 extern NSString * const kNetworkStatusChange;
+
 @interface NetworkReachabilityManager : NSObject
 
 
@@ -35,6 +33,11 @@ extern NSString * const kNetworkStatusChange;
 @property (nonatomic,assign) NetworkStatus currentNetworkStatus;
 
 /**
+ *  whether or not network can connect.
+ */
+@property (nonatomic,assign,getter=isConnect) BOOL connect;
+
+/**
  *  start Network Monitor.
  */
 - (void)startNotifier;
@@ -45,7 +48,7 @@ extern NSString * const kNetworkStatusChange;
 - (void)stopNotifier;
 
 /**
- *  U must use property or Viar to keep this instance . because in ARC system will deallocating it and u can not get notification. advise that initialize it in AppDelegate and add Observe where u need monititor nerwork status.
+ *  u must use property or Viar to keep this instance . because in ARC system will deallocating it and u can not get notification. advise that initialize it in AppDelegate and add Observe where u need monititor nerwork status.the notification.object is manager.
  *
  *  @return networkManager
  */
