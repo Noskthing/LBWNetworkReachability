@@ -423,31 +423,39 @@ NSString * const kNetworkStatusChange = @"NetworkStatusChange";
     _connect = isConnect;
     
     NetworkStatus status = NetworkStatusUnableConnect;
-    
-    if (isConnect)
+    if (_networkStatus == NetworkStatusUnableConnect)
     {
-        if (_networkStatus == NetworkViaWiFi)
-        {
-            status = NetworkStatusWifiAbleConnect;
-        }
-        else
-        {
-            status = NetworkStatusWifiUnableConnect;
-        }
+        status = NetworkStatusUnableConnect;
     }
     else
     {
-        if (_networkStatus == NetworkViaWiFi)
+        if (isConnect)
         {
-            status = NetworkStatusWWANAbleConnect;
+            if (_networkStatus == NetworkViaWiFi)
+            {
+                status = NetworkStatusWifiAbleConnect;
+            }
+            else
+            {
+                status = NetworkStatusWWANAbleConnect;
+            }
         }
         else
         {
-            status = NetworkStatusWWANUnableConnect;
+            if (_networkStatus == NetworkViaWiFi)
+            {
+                status = NetworkStatusWifiUnableConnect;
+            }
+            else
+            {
+                status = NetworkStatusWWANUnableConnect;
+            }
         }
+        
+        _currentNetworkStatus = status;
     }
     
-    _currentNetworkStatus = status;
+    
     
     //network status not chage so that manager doesn't post notification.
     if (_currentNetworkStatus == _previousStatus)
