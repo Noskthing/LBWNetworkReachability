@@ -34,8 +34,16 @@ NSString * const kNetworkStatusChange = @"NetworkStatusChange";
     //save SCNetworkReachabilityStatus
     NetworkReachabilityStatus _networkStatus;
     
+    //save previous network sttus . if it is equal to current network status we will not post notification . default is 999 so that the first time from manager start notifier manager must post notification.
+    NetworkStatus _previousStatus;
+    
     //save simple ping status for checking time out . when u start simple ping it will set YES . And it will set NO when u receive response data project.
     BOOL _isSimplePing;
+    
+    /**
+     *  heart packet for monitor network status . it will post notification when network status changed. default timerInval is 10s.
+     */
+    NSTimer * _timer;
 }
 
 /**
@@ -60,6 +68,8 @@ NSString * const kNetworkStatusChange = @"NetworkStatusChange";
         
         _networkStatus = NetworkNotReachable;
         
+        _previousStatus = 999;
+        
         //System network reachability
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkDidChanged:) name:kReachabilityChangedNotification object:nil];
     }
@@ -77,6 +87,10 @@ NSString * const kNetworkStatusChange = @"NetworkStatusChange";
     return networkReachabilityManager;
 }
 
+-(void)dealloc
+{
+    [self stopNotifier];
+}
 
 -(void)startNotifier
 {
@@ -84,6 +98,10 @@ NSString * const kNetworkStatusChange = @"NetworkStatusChange";
     [networkReachability startNotifier];
     
     _networkStatus = [networkReachability currentSystemNetworkReachabilityStatus];
+    
+    _timer = [NSTimer timerWithTimeInterval:10.f target:self selector:@selector(startSimplePing) userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSDefaultRunLoopMode];
+    
     if (_networkStatus != NetworkNotReachable)
     {
         [self startSimplePing];
@@ -91,18 +109,28 @@ NSString * const kNetworkStatusChange = @"NetworkStatusChange";
     else
     {
         _currentNetworkStatus = NetworkStatusUnableConnect;
+        _previousStatus = _currentNetworkStatus;
+        
         [[NSNotificationCenter defaultCenter] postNotificationName:kNetworkStatusChange object:self];
     }
 }
 
 -(void)stopNotifier
 {
+    NSLog(@"monitor stop");
+    
     LBWNetworkReachability * networkReachability = [LBWNetworkReachability sharedSystemNetworkReachability];
     [networkReachability stopNotifier];
     
     if (_simplePing)
     {
         [_simplePing stop];
+    }
+    
+    if (_timer)
+    {
+        [_timer invalidate];
+        _timer = nil;
     }
     [self clearSimplePing];
 }
@@ -139,6 +167,7 @@ NSString * const kNetworkStatusChange = @"NetworkStatusChange";
 
 - (void)checkSimplePingTimeOut
 {
+    NSLog(@"check simple ping time out");
     if (_isSimplePing)
     {
         if (_tryCount < 3)
@@ -156,6 +185,7 @@ NSString * const kNetworkStatusChange = @"NetworkStatusChange";
 
 - (void)flagForSimplePingResult:(BOOL)isConnect
 {
+    NSLog(@"simple ping end");
     _isSimplePing = NO;
     _tryCount = 0;
     
@@ -185,6 +215,14 @@ NSString * const kNetworkStatusChange = @"NetworkStatusChange";
     }
     
     _currentNetworkStatus = status;
+    
+    //network status not chage so that manager doesn't post notification.
+    if (_currentNetworkStatus == _previousStatus)
+    {
+        return;
+    }
+    
+    _previousStatus = _currentNetworkStatus;
     [[NSNotificationCenter defaultCenter] postNotificationName:kNetworkStatusChange object:self];
 }
 
@@ -194,7 +232,7 @@ NSString * const kNetworkStatusChange = @"NetworkStatusChange";
     LBWNetworkReachability * tmp = notification.object;
     _networkStatus = [tmp currentSystemNetworkReachabilityStatus];
     
-    NSLog(@"hahahaha");
+    NSLog(@"system network status changed");
     if ( _networkStatus != NetworkNotReachable)
     {
         [self startSimplePing];
@@ -208,6 +246,7 @@ NSString * const kNetworkStatusChange = @"NetworkStatusChange";
 #pragma mark    -Simple Ping Delegate
 - (void)simplePing:(SimplePing *)pinger didStartWithAddress:(NSData *)address
 {
+    NSLog(@"simple ping start with addresss");
     //reset
     _tryCount = 0;
     
